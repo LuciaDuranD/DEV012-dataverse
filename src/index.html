@@ -1,11 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Personajes/Logo.jpg" />
     <link rel="stylesheet" href="style.css" />
+    <title>TWD</title>
   </head>
   <body>
-    <script src="main.js" type="module"></script>
+    <header>
+      <h1>The Walking Dead</h1>
+    </header>
+
+    <main>
+      <h2>Personajes</h2>
+      <ul id="root">
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Rick.jpg" alt="Rick Grimes" />
+          <dt>Nombre:</dt>
+          <dd itemprop="name">Rick Grimes</dd>
+          <dt>Descripción:</dt>
+          <dd itemprop="description">
+            Ex sheriff y líder del grupo de supervivientes.
+          </dd>
+          <dt>Año de nacimiento:</dt>
+          <dd itemprop="yearOfBirth">1970</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd itemprop="placeOfBirth">King County, Georgia</dd>
+          <dt>Campo de desempeño:</dt>
+          <dd itemprop="mainField">Liderazgo y supervivencia</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Nigan.jpg" alt="Negan" />
+          <dt>Nombre:</dt>
+          <dd itemprop="name">Negan</dd>
+          <dt>Descripción:</dt>
+          <dd itemprop="description">Sádico líder de los Salvadores.</dd>
+          <dt>Año de nacimiento:</dt>
+          <dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt>
+          <dd itemprop="mainField">Liderazgo y brutalidad</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Daryl.jpg" alt="Daryl Dixon" />
+          <dt>Nombre:</dt>
+          <dd itemprop="name">Daryl Dixon</dd>
+          <dt>Descripción:</dt>
+          <dd itemprop="description">Experto cazador y rastreador.</dd>
+          <dt>Año de nacimiento:</dt>
+          <dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt>
+          <dd itemprop="mainField">Caza y rastreo</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Maggie.jpg" alt="Maggie Greene" />
+          <dt>Nombre:</dt>
+          <dd itemprop="name">Maggie Greene</dd>
+          <dt>Descripción:</dt>
+          <dd itemprop="description">
+            Hija de granjeros y líder del grupo Hilltop.
+          </dd>
+          <dt>Año de nacimiento:</dt>
+          <dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt>
+          <dd itemprop="mainField">Liderazgo y agricultura</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Carl.jpg" alt="Carl Grimes" />
+          <dt>Nombre:</dt>
+          <dd itemprop="name">Carl Grimes</dd>
+          <dt>Descripción:</dt>
+          <dd itemprop="description">Hijo de Rick y Lori Grimes.</dd>
+          <dt>Año de nacimiento:</dt>
+          <dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt>
+          <dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt>
+          <dd itemprop="mainField">Supervivencia y crecimiento</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Glenn.jpg" alt="Glenn Rhee" />
+          <dt>Nombre:</dt><dd itemprop="name">Glenn Rhee</dd>
+          <dt>Descripción:</dt><dd itemprop="description">Repostero y valioso miembro del grupo.</dd>
+          <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt><dd itemprop="mainField">Búsqueda de suministros y optimismo</dd>
+        </li>
+        <li itemscope itemtype="https://schema.org/Person">
+          <img src="./Personajes/Michonne.jpg" alt="Michonne" />
+          <dt>Nombre:</dt><dd itemprop="name">Michonne</dd>
+          <dt>Descripción:</dt><dd itemprop="description">Hábil con una katana y protectora de Andrea.</dd>
+          <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+          <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+          <dt>Campo de desempeño:</dt><dd itemprop="mainField">Combate con katana y protección</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Shane.jpg" alt="Shane Walsh" />
+        <dt>Nombre:</dt><dd itemprop="name">Shane Walsh</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Amigo y compañero de Rick en el pasado.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Supervivencia y conflicto</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Rosita.jpg" alt="Rosita Espinosa" />
+        <dt>Nombre:</dt><dd itemprop="name">Rosita Espinosa</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Hábil tiradora y miembro del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Tiro y relaciones personales</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Carol.jpg" alt="Carol Peletier" />
+        <dt>Nombre:</dt><dd itemprop="name">Carol Peletier</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Madre y superviviente empoderada.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Liderazgo y adaptabilidad</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Judith.jpg" alt="Judith Grimes" />
+        <dt>Nombre:</dt><dd itemprop="name">Judith Grimes</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Hija de Rick y Lori Grimes, criada en el apocalipsis.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Supervivencia infantil</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Morgan.jpg" alt="Morgan Jones" />
+        <dt>Nombre:</dt><dd itemprop="name">Morgan Jones</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Sobreviviente solitario y experto en artes marciales.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Supervivencia y artes marciales</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Beth.jpg" alt="Beth Greene" />
+        <dt>Nombre:</dt><dd itemprop="name">Beth Greene</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Joven cantante y miembro del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Canto y valentía</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Hershel.jpg" alt="Hershel Greene" />
+        <dt>Nombre:</dt><dd itemprop="name">Hershel Greene</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Granjero y médico del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Agricultura y medicina</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Beta.jpg" alt="Beta" />
+        <dt>Nombre:</dt><dd itemprop="name">Beta</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Brutal líder de los Susurradores.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Liderazgo y brutalidad</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Tyreese.jpg" alt="Tyreese" />
+        <dt>Nombre:</dt><dd itemprop="name">Tyreese</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Fuerte y compasivo miembro del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Valentía y compasión</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Andrea.jpg" alt="Andrea" />
+        <dt>Nombre:</dt><dd itemprop="name">Andrea</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Experta en armas de fuego y defensora del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Armas de fuego y protección</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Lori.jpg" alt="Lori Grimes" />
+        <dt>Nombre:</dt><dd itemprop="name">Lori Grimes</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Esposa de Rick y madre de Carl y Judith.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Protección de la familia</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Dale.jpg" alt="Dale Horvath" />
+        <dt>Nombre:</dt><dd itemprop="name">Dale Horvath</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Anciano sabio y voz de la razón del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Sabiduría y resolución de conflictos</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/El gobernador.jpg" alt="El Gobernador" />
+        <dt>Nombre:</dt><dd itemprop="name">El Gobernador</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Líder autoritario de Woodbury.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Liderazgo autoritario</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Eugene.jpg" alt="Eugene Porter" />
+        <dt>Nombre:</dt><dd itemprop="name">Eugene Porter</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Experto en ciencia y tecnología.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Ciencia y tecnología</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Paul.jgp" alt="Paul Monroe" />
+        <dt>Nombre:</dt><dd itemprop="name">Paul Monroe</dd>
+        <dt>Descripción:</dt><dd itemprop="description">También conocido como Jesús, hábil luchador y explorador.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Combate y exploración</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Lizzie.jgp" alt="Lizzie Samuels" />
+        <dt>Nombre:</dt><dd itemprop="name">Lizzie Samuels</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Niña perturbada por el apocalipsis zombi.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Supervivencia infantil y perturbación</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Tara.jpg" alt="Tara Chambler" />
+        <dt>Nombre:</dt><dd itemprop="name">Tara Chambler</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Antigua oficial de la policía y miembro del grupo.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Policía y supervivencia</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Abraham.jpg" alt="Abraham Ford" />
+        <dt>Nombre:</dt><dd itemprop="name">Abraham Ford</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Sargento militar y luchador habilidoso.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Militar y lucha</dd>
+      </li>
+      <li itemscope itemtype="https://schema.org/Person">
+        <img src="./Personajes/Rey ezekiel.jpg" alt="Rey Ezekiel" />
+        <dt>Nombre:</dt><dd itemprop="name">Rey Ezekiel</dd>
+        <dt>Descripción:</dt><dd itemprop="description">Líder del Reino y dueño de Shiva, el tigre.</dd>
+        <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">Año de nacimiento (si se conoce)</dd>
+        <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">Lugar de nacimiento (si se conoce)</dd>
+        <dt>Campo de desempeño:</dt><dd itemprop="mainField">Liderazgo y protección del Reino</dd>
+      </li>
+      </ul>
+    </main>
+
+    <footer>
+      <button data-testid="button-clear">Clear</button>
+    </footer>
+
+    <footer>
+      <p>Desarrolladoras<br><strong>O.Lucia Duran<br>Liz Amao</strong></p>
+    </footer>
+
+    <script src="dataFunctions.js"></script>
+    <script src="view.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
