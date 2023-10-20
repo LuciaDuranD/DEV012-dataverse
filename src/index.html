@@ -14,6 +14,15 @@
 
     <main>
       <h2>Personajes</h2>
+      <select data-testid="select-sort" name="type">
+        <option value="asc">A - Z</option>
+        <option value="desc">Z - A</option>
+        <option value="genero mujer">Mujeres</option>
+        <option value="genero varon">Varones</option>
+        <option value="status vivo">Vivo</option>
+        <option value="status muerto">Muerto</option>
+      </select>
+      
       <ul id="root">
         <li itemscope itemtype="https://schema.org/Person">
           <img src="./Personajes/Rick.jpg" alt="Rick Grimes" />
