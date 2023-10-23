@@ -10,187 +10,162 @@
 </head>
 
 <body>
-  <div class="personajes"></div>
-  <h1>Personajes</h1>
-  <div class="caja-menu">
-    <select data-testid="select-sort" name="type">
-      <option value="asc">A - Z</option>
-      <option value="desc">Z - A</option>
-      <option value="genero mujer">Mujeres</option>
-      <option value="genero varon">Varones</option>
-      <option value="status vivo">Vivo</option>
-      <option value="status muerto">Muerto</option>
-    </select>
-    <div>
-
-      <div class="cajas-personajes"></div>
-      <ul id="root">
-        <li itemscope itemtype="https://schema.org/Person">
-          <a href="RICK.html" href="RICK.css"></a>
-          <img src="./Imagenes/Rick.jpg" alt="Rick Grimes" />
-           <dt>Nombre:</dt>
-           <dd itemprop="name">Rick Grimes</dd><dt>Descripción:</dt>
-           <dd itemprop="description"> Ex sheriff y líder del grupo de supervivientes.</dd>
-          </a>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Nigan.jpg" alt="Negan" />
-           <dt>Nombre:</dt><dd itemprop="name">Negan</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Sádico líder de los Salvadores.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Daryl.jpg" alt="Daryl Dixon" />
-           <dt>Nombre:</dt><dd itemprop="name">Daryl Dixon</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Experto cazador y rastreador.</dd>
-        </li>
-       
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Maggie.jpg" alt="Maggie Greene" />
-           <dt>Nombre:</dt><dd itemprop="name">Maggie Greene</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Hija de granjeros y líder del grupo Hilltop.</dd>
-        </li>
-          
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Carl.jpg" alt="Carl Grimes" />
-           <dt>Nombre:</dt><dd itemprop="name">Carl Grimes</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Hijo de Rick y Lori Grimes.</dd>
-        </li>
-          
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Glenn.jpg" alt="Glenn Rhee" />
-           <dt>Nombre:</dt><dd itemprop="name">Glenn Rhee</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Repostero y valioso miembro del grupo.</dd>
-
-        </li>
-          
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Michonne.jpg" alt="Michonne" />
-           <dt>Nombre:</dt><dd itemprop="name">Michonne</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Hábil con una katana y protectora de Andrea.</dd>
-        </li>
-          
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Shane.jpg" alt="Shane Walsh" />
-           <dt>Nombre:</dt><dd itemprop="name">Shane Walsh</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Amigo y compañero de Rick en el pasado.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Rosita.jpg" alt="Rosita Espinosa" />
-           <dt>Nombre:</dt><dd itemprop="name">Rosita Espinosa</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Hábil tiradora y miembro del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Carol.jpg" alt="Carol Peletier" />
-           <dt>Nombre:</dt><dd itemprop="name">Carol Peletier</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Madre y superviviente empoderada.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Judith.jpg" alt="Judith Grimes" />
-           <dt>Nombre:</dt><dd itemprop="name">Judith Grimes</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Hija de Rick y Lori Grimes, criada en el apocalipsis.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Morgan.jpg" alt="Morgan Jones" />
-           <dt>Nombre:</dt><dd itemprop="name">Morgan Jones</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Sobreviviente solitario y experto en artes marciales.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Beth.jpg" alt="Beth Greene" />
-           <dt>Nombre:</dt><dd itemprop="name">Beth Greene</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Joven cantante y miembro del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Hershel.jpg" alt="Hershel Greene" />
-           <dt>Nombre:</dt><dd itemprop="name">Hershel Greene</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Granjero y médico del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Beta.jpg" alt="Beta" />
-           <dt>Nombre:</dt><dd itemprop="name">Beta</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Brutal líder de los Susurradores.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Tyreese.jpg" alt="Tyreese" />
-           <dt>Nombre:</dt><dd itemprop="name">Tyreese</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Fuerte y compasivo miembro del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Andrea.jpg" alt="Andrea" />
-           <dt>Nombre:</dt><dd itemprop="name">Andrea</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Experta en armas de fuego y defensora del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Lori.jpg" alt="Lori Grimes" />
-           <dt>Nombre:</dt><dd itemprop="name">Lori Grimes</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Esposa de Rick y madre de Carl y Judith.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Dale.jpg" alt="Dale Horvath" />
-           <dt>Nombre:</dt><dd itemprop="name">Dale Horvath</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Anciano sabio y voz de la razón del grupo.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/El gobernador.jpg" alt="El Gobernador" />
-           <dt>Nombre:</dt><dd itemprop="name">El Gobernador</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Líder autoritario de Woodbury.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Eugene.jpg" alt="Eugene Porter" />
-           <dt>Nombre:</dt><dd itemprop="name">Eugene Porter</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Experto en ciencia y tecnología.</dd>
-        </li>
-  
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Paul.jgp" alt="Paul Monroe" />
-           <dt>Nombre:</dt><dd itemprop="name">Paul Monroe</dd>
-           <dt>Descripción:</dt><dd itemprop="description">También conocido como Jesús, hábil luchador y explorador.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Lizzie.jgp" alt="Lizzie Samuels" />
-           <dt>Nombre:</dt><dd itemprop="name">Lizzie Samuels</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Niña perturbada por el apocalipsis zombi.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Tara.jpg" alt="Tara Chambler" />
-           <dt>Nombre:</dt><dd itemprop="name">Tara Chambler</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Antigua oficial de la policía y miembro del grupo.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Abraham.jpg" alt="Abraham Ford" />
-           <dt>Nombre:</dt><dd itemprop="name">Abraham Ford</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Sargento militar y luchador habilidoso.</dd>
-        </li>
-        
-        <li itemscope itemtype="https://schema.org/Person">
-          <img src="./Imagenes/Rey ezekiel.jpg" alt="Rey Ezekiel" />
-           <dt>Nombre:</dt><dd itemprop="name">Rey Ezekiel</dd>
-           <dt>Descripción:</dt><dd itemprop="description">Líder del Reino y dueño de Shiva, el tigre.</dd>
-        </li>
-    </div>
-  </div>
-  <div class="boton-clear">
-    <footer>
-      <button data-testid="button-clear">Clear</button>
-    </footer>
-  </div>
+<button id="mostrar-menu">Mostrar Menú</button>
+<div class="menu-oculto">
+<div class="personajes"></div>
+<h1>Personajes</h1>
+<div class="caja-menu">
+<select data-testid="select-sort" name="type">
+  <option value="asc">A - Z</option>
+  <option value="desc">Z - A</option>
+  <option value="asc edad">0 - 70</option>
+  <option value="desc edad">70 - 0</option>
+  <option value="status vivo">Vivo</option>
+  <option value="status muerto">Muerto</option>
+  <option value="numero episodios">200 - 0</option>
+</select>
+</div>
+<div class="boton-clear">
+<footer>
+<button data-testid="button-clear">Clear</button>
+</footer>
+</div>
+</div>
+<div class="cajas-personajes"></div>
+<ul id="root">
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Rick.jpg" alt="Rick Grimes" />
+  <a href="http://127.0.0.1:5500/src/RICK.html"/></a>
+    <dt>Nombre:</dt>
+    <dd itemprop="name">Rick Grimes</dd><dt>Descripción:</dt>
+    <dd itemprop="description"> Ex sheriff y líder del grupo de supervivientes.</dd>
+  </a>
+  </li>  
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Nigan.jpg" alt="Negan" />
+    <dt>Nombre:</dt><dd itemprop="name">Negan</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Sádico líder de los Salvadores.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Daryl.jpg" alt="Daryl Dixon" />
+    <dt>Nombre:</dt><dd itemprop="name">Daryl Dixon</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Experto cazador y rastreador.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Maggie.jpg" alt="Maggie Greene" />
+    <dt>Nombre:</dt><dd itemprop="name">Maggie Greene</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Hija de granjeros y líder del grupo Hilltop.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Carl.jpg" alt="Carl Grimes" />
+    <dt>Nombre:</dt><dd itemprop="name">Carl Grimes</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Hijo de Rick y Lori Grimes.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Glenn.jpg" alt="Glenn Rhee" />
+    <dt>Nombre:</dt><dd itemprop="name">Glenn Rhee</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Repostero y valioso miembro del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Michonne.jpg" alt="Michonne" />
+    <dt>Nombre:</dt><dd itemprop="name">Michonne</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Hábil con una katana y protectora de Andrea.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Shane.jpg" alt="Shane Walsh" />
+    <dt>Nombre:</dt><dd itemprop="name">Shane Walsh</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Amigo y compañero de Rick en el pasado.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Rosita.jpg" alt="Rosita Espinosa" />
+    <dt>Nombre:</dt><dd itemprop="name">Rosita Espinosa</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Hábil tiradora y miembro del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Carol.jpg" alt="Carol Peletier" />
+    <dt>Nombre:</dt><dd itemprop="name">Carol Peletier</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Madre y superviviente empoderada.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Judith.jpg" alt="Judith Grimes" />
+    <dt>Nombre:</dt><dd itemprop="name">Judith Grimes</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Hija de Rick y Lori Grimes, criada en el apocalipsis.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Morgan.jpg" alt="Morgan Jones" />
+    <dt>Nombre:</dt><dd itemprop="name">Morgan Jones</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Sobreviviente solitario y experto en artes marciales.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Beth.jpg" alt="Beth Greene" />
+    <dt>Nombre:</dt><dd itemprop="name">Beth Greene</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Joven cantante y miembro del grupo.</dd>
+   </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Hershel.jpg" alt="Hershel Greene" />
+    <dt>Nombre:</dt><dd itemprop="name">Hershel Greene</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Granjero y médico del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Beta.jpg" alt="Beta" />
+    <dt>Nombre:</dt><dd itemprop="name">Beta</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Brutal líder de los Susurradores.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Tyreese.jpg" alt="Tyreese" />
+    <dt>Nombre:</dt><dd itemprop="name">Tyreese</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Fuerte y compasivo miembro del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Andrea.jpg" alt="Andrea" />
+    <dt>Nombre:</dt><dd itemprop="name">Andrea</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Experta en armas de fuego y defensora del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Lori.jpg" alt="Lori Grimes" />
+    <dt>Nombre:</dt><dd itemprop="name">Lori Grimes</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Esposa de Rick y madre de Carl y Judith.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Dale.jpg" alt="Dale Horvath" />
+    <dt>Nombre:</dt><dd itemprop="name">Dale Horvath</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Anciano sabio y voz de la razón del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/El gobernador.jpg" alt="El Gobernador" />
+    <dt>Nombre:</dt><dd itemprop="name">El Gobernador</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Líder autoritario de Woodbury.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Eugene.jpg" alt="Eugene Porter" />
+    <dt>Nombre:</dt><dd itemprop="name">Eugene Porter</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Experto en ciencia y tecnología.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Paul.jgp" alt="Paul Monroe" />
+    <dt>Nombre:</dt><dd itemprop="name">Paul Monroe</dd>
+    <dt>Descripción:</dt><dd itemprop="description">También conocido como Jesús, hábil luchador y explorador.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Lizzie.jgp" alt="Lizzie Samuels" />
+    <dt>Nombre:</dt><dd itemprop="name">Lizzie Samuels</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Niña perturbada por el apocalipsis zombi.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Tara.jpg" alt="Tara Chambler" />
+    <dt>Nombre:</dt><dd itemprop="name">Tara Chambler</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Antigua oficial de la policía y miembro del grupo.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Abraham.jpg" alt="Abraham Ford" />
+    <dt>Nombre:</dt><dd itemprop="name">Abraham Ford</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Sargento militar y luchador habilidoso.</dd>
+  </li>
+  <li itemscope itemtype="https://schema.org/Person">
+  <img src="./Imagenes/Rey ezekiel.jpg" alt="Rey Ezekiel" />
+    <dt>Nombre:</dt><dd itemprop="name">Rey Ezekiel</dd>
+    <dt>Descripción:</dt><dd itemprop="description">Líder del Reino y dueño de Shiva, el tigre.</dd>
+  </li>
   <div class="creditos">
     <footer>
       <p>Desarrolladoras<br><strong>O.Lucia Duran<br>Liz Amao</strong></p>
