@@ -4,24 +4,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./Imagenes/Logo.jpg">
+  <link rel="icon" href="./Imagenes/Fondos/Logo.jpg">
   <link rel="stylesheet" href="style.css">
   <title>TWD</title>
 </head>
 
 <body>
-<div class="menu-oculto">
+
+  <div class="menu-oculto">
 <div class="personajes"></div>
 <h1>Filtrado de Personajes</h1>
 <div class="caja-menu">
 <select data-testid="select-sort" name="type">
-  <option value="asc">A - Z</option>
-  <option value="desc">Z - A</option>
-  <option value="asc edad">0 - 70</option>
-  <option value="desc edad">70 - 0</option>
-  <option value="status vivo">Vivo</option>
-  <option value="status muerto">Muerto</option>
+  <option value="asc">A-Z</option>
+  <option value="desc">Z-A</option>
 </select>
+<select data-testid="select-sort" name="type">
+  <option value="edadMenor">0-70</option>
+  <option value="edadMayor">70-0</option>
+</select>
+<select data-testid="select-sort" name="type">
+  <option value="vivo">Vivo</option>
+  <option value="muerto">Muerto</option>
+</select>
+
 </div>
 <div class="boton-clear">
 <footer>
@@ -30,7 +36,9 @@
 </div>
 </div>
 <div class="cajas-personajes"></div>
+
 <ul id="root">
+
   <div class="creditos">
     <footer>
       <p>Desarrolladoras<br><strong>O.Lucia Duran<br>Liz Amao</strong></p>

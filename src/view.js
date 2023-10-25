@@ -1,47 +1,21 @@
 export const renderItems = (data) => {
-  const ulElement = document.getElementById("root");
+  const root = document.getElementById("root");
 
-  data.forEach((personaje) => {
-    const liElement = document.createElement("li");
-    liElement.setAttribute("itemscope", "itemscope");
-    liElement.setAttribute("itemtype", "https://schema.org/Person");
+  root.innerHTML = "";
 
-    const imgElement = document.createElement("img");
-    imgElement.setAttribute("src", personaje.ImagenSrc);
-    imgElement.setAttribute("alt", personaje.Nombre);
+  data.forEach((character) => {
+    const li = document.createElement("li");
 
-    const dtNombre = document.createElement("dt");
-    dtNombre.textContent = "Nombre:";
+    const img = document.createElement("img");
+    img.src = character.imageUrl;
+    img.alt = character.name;
 
-    const ddNombre = document.createElement("dd");
-    ddNombre.setAttribute("itemprop", "name");
-    ddNombre.textContent = personaje.Nombre;
+    const title = document.createElement("h2");
+    title.textContent = character.name;
 
-    const dtDescripcion = document.createElement("dt");
-    dtDescripcion.textContent = "Descripción:";
+    li.appendChild(img);
+    li.appendChild(title);
 
-    const ddDescripcion = document.createElement("dd");
-    ddDescripcion.setAttribute("itemprop", "description");
-    ddDescripcion.textContent = personaje.Edad;
-
-    liElement.appendChild(imgElement);
-    liElement.appendChild(dtNombre);
-    liElement.appendChild(ddNombre);
-    liElement.appendChild(dtDescripcion);
-    liElement.appendChild(ddDescripcion);
-
-    ulElement.appendChild(liElement);
+    root.appendChild(li);
   });
 };
-
-const personajes = [
-  {
-    Nombre: "Rick Grimes",
-    Edad: "Ex sheriff y líder del grupo de supervivientes.",
-    ImagenSrc: "./Imagenes/Rick.jpg",
-    Estado: "Vivo",
-  },
-  //FALTA COLOCAR EL RESTO DE PERSONAJES LIZZ//
-];
-
-renderItems(personajes);
