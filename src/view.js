@@ -1,21 +1,21 @@
 export const renderItems = (data) => {
-  const root = document.getElementById("root");
+  console.log(data);
 
-  root.innerHTML = "";
-
-  data.forEach((character) => {
-    const li = document.createElement("li");
-
-    const img = document.createElement("img");
-    img.src = character.imageUrl;
-    img.alt = character.name;
-
-    const title = document.createElement("h2");
-    title.textContent = character.name;
-
-    li.appendChild(img);
-    li.appendChild(title);
-
-    root.appendChild(li);
+  const container = document.createElement("div");
+  data.forEach((personaje) => {
+    const personajeDiv = document.createElement("div");
+    personajeDiv.innerHTML = `
+   <dl itemscope itemtype="PersonajesTheWalkingDead">
+   <img src="./Imagenes/rick grimes.png" alt="Rick Grimes"/>
+     <dt>Name:</dt><dd itemprop="name">${personaje.name}</dd>
+     <dt>Short Description:</dt><dd itemprop="shortDescription">${personaje.shortDescription}</dd>
+     <dt>Description:</dt><dd itemprop="description">${personaje.description}</dd>
+     <dt>Age:</dt><dd itemprop="description">${personaje.age}</dd>
+     <dt>Status:</dt><dd itemprop="status">${personaje.status}</dd>
+     <dt>Main Field:</dt><dd itemprop="mainField">${personaje.mainField}</dd>
+   </div>
+   `;
+    container.appendChild(personajeDiv);
   });
+  return container;
 };

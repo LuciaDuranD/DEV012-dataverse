@@ -1,6 +1,26 @@
-import data from "./data/dataset.js";
+import { example } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 
-renderItems(data);
+import data from "./data/dataset.js";
 
-console.log(data);
+console.log(example, renderItems(data), data);
+
+const personajes = document.getElementById("root");
+
+personajes.appendChild(renderItems(data));
+
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+const closeButton = document.getElementById("close-button");
+
+function showMenu() {
+  menu.style.transform = "translateX(0)";
+}
+
+function hideMenu() {
+  menu.style.transform = "translateX(-100%)";
+}
+
+menuButton.addEventListener("click", showMenu);
+
+closeButton.addEventListener("click", hideMenu);
