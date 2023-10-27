@@ -17,7 +17,7 @@ const personajes = [
     name: "Negan",
     shortDescription: "Sádico líder de los Salvadores.",
     description:
-      "Negan es un personaje icónico conocido por su brutalidad y su liderazgo de los Salvadores. Utiliza un bate de béisbol envuelto en alambre de púas llamado Lucille. Su presencia es una constante amenaza para los protagonistas de la serie.",
+      "Negan es un personaje icónico conocido por su brutalidad y su liderazgo con los Salvadores. Utiliza un bate de béisbol envuelto en alambre de púas llamado Lucille. Su presencia es una constante amenaza para los protagonistas de la serie.",
     imageUrl: "./Imagenes/negan.png",
     facts: {
       age: "56",
