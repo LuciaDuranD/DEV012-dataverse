@@ -7,9 +7,9 @@ export const renderItems = (data) => {
     personajeDiv.innerHTML = `
       <dl itemscope itemtype="https://schema.org/Person">
         <img src="${personaje.imageUrl}" alt="${personaje.id}">
-        <dt>Name:</dt><dd itemprop="name">${personaje.name}</dd>
-        <dt>Age:</dt><dd itemprop="age">${personaje.age}</dd>
-        <dt>Status:</dt><dd itemprop="status">${personaje.status}</dd>
+        <dt>Nombre:</dt><dd itemprop="name">${personaje.name}</dd>
+        <dt>Edad:</dt><dd itemprop="age">${personaje.facts.age}</dd>
+        <dt>Estado:</dt><dd itemprop="status">${personaje.facts.status}</dd>
       </dl>
     `;
     container.appendChild(personajeDiv);

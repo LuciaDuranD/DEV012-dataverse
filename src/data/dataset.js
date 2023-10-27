@@ -8,7 +8,7 @@ const personajes = [
     imageUrl: "./Imagenes/rick grimes.png",
     facts: {
       age: "49",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Liderazgo y supervivencia",
     },
   },
@@ -21,7 +21,7 @@ const personajes = [
     imageUrl: "./Imagenes/negan.png",
     facts: {
       age: "56",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Liderazgo y brutalidad",
     },
   },
@@ -34,7 +34,7 @@ const personajes = [
     imageUrl: "./Imagenes/Darly.png",
     facts: {
       age: "45",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Caza y rastreo",
     },
   },
@@ -47,7 +47,7 @@ const personajes = [
     imageUrl: "./Imagenes/maggie greene.png",
     facts: {
       age: "41",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Liderazgo y agricultura",
     },
   },
@@ -60,7 +60,7 @@ const personajes = [
     imageUrl: "./Imagenes/carl grimes.png",
     facts: {
       age: "15",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Supervivencia y crecimiento",
     },
   },
@@ -73,7 +73,7 @@ const personajes = [
     imageUrl: "./Imagenes/glen.png",
     facts: {
       age: "25",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Búsqueda de suministros y optimismo",
     },
   },
@@ -86,7 +86,7 @@ const personajes = [
     imageUrl: "./Imagenes/Michonne.png",
     facts: {
       age: "35",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Combate con katana y protección",
     },
   },
@@ -99,7 +99,7 @@ const personajes = [
     imageUrl: "./Imagenes/shane wals.png",
     facts: {
       age: "35",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Supervivencia y conflicto",
     },
   },
@@ -112,7 +112,7 @@ const personajes = [
     imageUrl: "./Imagenes/rosita espinoza.png",
     facts: {
       age: "30",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Tiro y relaciones personales",
     },
   },
@@ -125,7 +125,7 @@ const personajes = [
     imageUrl: "./Imagenes/carol.png",
     facts: {
       age: "45",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Liderazgo y adaptabilidad",
     },
   },
@@ -138,7 +138,7 @@ const personajes = [
     imageUrl: "./Imagenes/judith grimes.png",
     facts: {
       age: "11",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Supervivencia infantil",
     },
   },
@@ -151,7 +151,7 @@ const personajes = [
     imageUrl: "./Imagenes/Morgan.png",
     facts: {
       age: "57",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Supervivencia y artes marciales",
     },
   },
@@ -164,7 +164,7 @@ const personajes = [
     imageUrl: "./Imagenes/beth greene.png",
     facts: {
       age: "18",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Canto y valentía",
     },
   },
@@ -177,7 +177,7 @@ const personajes = [
     imageUrl: "./Imagenes/hershel greene.png",
     facts: {
       age: "65",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Agricultura y medicina",
     },
   },
@@ -190,7 +190,7 @@ const personajes = [
     imageUrl: "./Imagenes/Beta.png",
     facts: {
       age: "50",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Liderazgo y brutalidad",
     },
   },
@@ -203,7 +203,7 @@ const personajes = [
     imageUrl: "./Imagenes/tyreese.png",
     facts: {
       age: "40",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Valentía y compasión",
     },
   },
@@ -216,7 +216,7 @@ const personajes = [
     imageUrl: "./Imagenes/andrea.png",
     facts: {
       age: "35",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Armas de fuego y protección",
     },
   },
@@ -229,7 +229,7 @@ const personajes = [
     imageUrl: "./Imagenes/lori grimes.png",
     facts: {
       age: "35",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Protección de la familia",
     },
   },
@@ -242,7 +242,7 @@ const personajes = [
     imageUrl: "./Imagenes/DALE.png",
     facts: {
       age: "65",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Sabiduría y resolución de conflictos",
     },
   },
@@ -255,7 +255,7 @@ const personajes = [
     imageUrl: "./Imagenes/el gobernador.png",
     facts: {
       age: "40",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Liderazgo autoritario",
     },
   },
@@ -268,7 +268,7 @@ const personajes = [
     imageUrl: "./Imagenes/eugene porter.png",
     facts: {
       age: "35",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Ciencia y tecnología",
     },
   },
@@ -282,7 +282,7 @@ const personajes = [
     imageUrl: "./Imagenes/jesus (paul monroe).png",
     facts: {
       age: "30",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Combate y exploración",
     },
   },
@@ -295,7 +295,7 @@ const personajes = [
     imageUrl: "./Imagenes/lizzie samuels.png",
     facts: {
       age: "12",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Supervivencia infantil y perturbación",
     },
   },
@@ -308,7 +308,7 @@ const personajes = [
     imageUrl: "./Imagenes/tara.png",
     facts: {
       age: "30",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Policía y supervivencia",
     },
   },
@@ -321,7 +321,7 @@ const personajes = [
     imageUrl: "./Imagenes/abraham.png",
     facts: {
       age: "45",
-      status: "muerto",
+      status: "Muerto",
       mainField: "Militar y lucha",
     },
   },
@@ -334,7 +334,7 @@ const personajes = [
     imageUrl: "./Imagenes/rey ezekiel.png",
     facts: {
       age: "48",
-      status: "vivo",
+      status: "Vivo",
       mainField: "Liderazgo y protección del Reino",
     },
   },

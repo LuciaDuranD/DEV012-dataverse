@@ -1,12 +1,7 @@
-//import { example } from "./dataFunctions.js";//
 import { renderItems } from "./view.js";
-
 import data from "./data/dataset.js";
 
-console.log(renderItems(data), data);
-
 const personajes = document.getElementById("root");
-
 personajes.appendChild(renderItems(data));
 
 const menuButton = document.getElementById("menu-button");
@@ -22,5 +17,4 @@ function hideMenu() {
 }
 
 menuButton.addEventListener("click", showMenu);
-
 closeButton.addEventListener("click", hideMenu);
