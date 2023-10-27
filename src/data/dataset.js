@@ -200,7 +200,7 @@ const personajes = [
     shortDescription: "Fuerte y compasivo miembro del grupo.",
     description:
       "Tyreese es un miembro fuerte y compasivo del grupo de supervivientes. Es conocido por su valentía en la lucha contra los caminantes y su deseo de mantener a salvo a su grupo. Su personalidad calmada a menudo es un faro de esperanza.",
-    imageUrl: "./Imagenes/Beta.png",
+    imageUrl: "./Imagenes/tyreese.png",
     facts: {
       age: "40",
       status: "muerto",

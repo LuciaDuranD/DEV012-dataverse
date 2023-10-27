@@ -16,37 +16,38 @@
     <div class="menu-oculto">
       <div id="toggle-menu" class="menu-icon">&#9776;</div>
       <div class="caja-menu">
-        <h1>Filtro de Personajes</h1>
-        <select id="filtro-letra" data-testid="select-sort" name="type">
-          <option value="Letra">Letra</option>
-          <option value="asc">A-Z</option>
-          <option value="desc">Z-A</option>
-        </select>
-        <select id="filtro-edad" data-testid="select-sort" name="type">
-          <option value="Edad">Edad</option>
-          <option value="edadMenor">0-70</option>
-          <option value="edadMayor">70-0</option>
-        </select>
-        <select id="filtro-estado" data-testid="select-sort" name="type">
-          <option value="V/M">Estado</option>
-          <option value="vivo">Vivo</option>
-          <option value="muerto">Muerto</option>
-        </select>
-        <div class="boton-clear">
-          <button data-testid="button-clear">Clear</button>
-        </div>
+          <h1>Filtro de Personajes</h1>
+          <select id="filtro-letra" data-testid="select-sort" name="type">
+            <option value="Letra">Letra</option>
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+          </select>
+          <select id="filtro-edad" data-testid="select-sort" name="type">
+            <option value="Edad">Edad</option>
+            <option value="edadMenor">0-70</option>
+            <option value="edadMayor">70-0</option>
+          </select>
+          <select id="filtro-estado" data-testid="select-sort" name="type">
+            <option value="V/M">Estado</option>
+            <option value="vivo">Vivo</option>
+            <option value="muerto">Muerto</option>
+          </select>
+          <div class="boton-clear">
+            <button data-testid="button-clear">Clear</button>
+          </div>
+          <div class="creditos">
+            <footer>
+              <p>
+                Desarrolladoras<br /><strong>O.Lucia Duran<br />Liz Amao</strong>
+              </p>
+            </footer>
+          </div>
       </div>
-      <div class="creditos">
-        <footer>
-          <p>
-            Desarrolladoras<br /><strong>O.Lucia Duran<br />Liz Amao</strong>
-          </p>
-        </footer>
       </div>
     </div>
     <div class="cajas-personajes">
       <ul id="root"></ul>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
