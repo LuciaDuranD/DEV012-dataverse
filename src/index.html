@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./Imagenes/Fondos/Logo.jpg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TWD</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./Imagenes/Fondos/Logo.jpg" />
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-  <title>TWD</title>
-</head>
-
-<body>
-  <div class="menu">
-    <img class="sangre" src="./Imagenes/Mobile/Sangre.png" alt="SANGRE"/>
-<h1>Filtrado</h1>
-<select id="filtro-letra" data-testid="select-sort" name="type">
-  <option value="Letra" disabled selected>Nombre</option>
-  <option value="asc">A-Z</option>
-  <option value="desc">Z-A</option>
-</select>
-<select id="filtro-edad" data-testid="select-sort" name="type">
-  <option value="Edad" disabled selected>Edad</option>
-  <option value="edadMenor">0-70</option>
-  <option value="edadMayor">70-0</option>
-</select>
-<select id="filtro-estado" data-testid="select-sort" name="type">
-  <option value="V/M" disabled selected>Estado de Vida</option>
-  <option value="vivo">Vivo</option>
-  <option value="muerto">Muerto</option>
-</select>
-      <div class="boton-clear">
+  <body>
+    <script type="module" src="main.js"></script>
+    <nav>
+      <input type="checkbox" id="menu" />
+      <i class="fi fi-br-menu-burger" id="icons"></i>
+      <i class="fi fi-br-cross" id="icons-equis"></i>
+      <div id="filtros">
+        <img class="sangre" src="./Imagenes/Mobile/Sangre.png" alt="SANGRE" />
+        <h1>Filtrado</h1>
+        <select id="filtro-letra" data-testid="select-filter" name="A-Z">
+          <option value="Letra" disabled selected>Nombre</option>
+          <option value="asc">A-Z</option>
+          <option value="desc">Z-A</option>
+        </select>
+        <select id="filtro-edad" data-testid="select-filter" name="EDADES">
+          <option value="Edad" disabled selected>Edad</option>
+          <option value="edadMenor">0-70</option>
+          <option value="edadMayor">70-0</option>
+        </select>
+        <select id="filtro-estado" data-testid="select-filter" name="ESTADOS">
+          <option value="V/M" disabled selected>Estado de Vida</option>
+          <option value="vivo">Vivo</option>
+          <option value="muerto">Muerto</option>
+        </select>
         <button data-testid="button-clear">Clear</button>
-        <img class="zombie" src="./Imagenes/Mobile/zombie.png" alt="ZOMBIE"/>
+        <img class="zombie" src="./Imagenes/Mobile/zombie.png" alt="ZOMBIE" />
       </div>
-      </div>
-  </div>
-  <div class="creditos">
-    <footer>
-      <p>
-        Desarrolladoras: <strong> O.Lucia Duran y Liz Amao</strong>
-      </p>
-    </footer>
-  </div>
-  <div class="cajas-personajes">
-    <ul id="personajes-list"></ul>
-  </div>
-  <script type="module" src="main.js"></script>
-</body>
-
+    </nav>
+    <p id="cajas-personajes"></p>
+    <div id="root"></div>
+    <div class="creditos">
+      <footer>
+        <p>Desarrolladoras: <strong> O.Lucia Duran y Liz Amao</strong></p>
+      </footer>
+    </div>
+  </body>
 </html>
