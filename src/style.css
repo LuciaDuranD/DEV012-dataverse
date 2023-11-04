@@ -25,7 +25,7 @@ ul {
   margin: 0px auto;
 }
 
-.cajas-personajes ul#personajes-list dl {
+.cajas-personajes ul li {
   border: 2px solid #a10f0f4b;
   border-radius: 20px;
   display: flex;
@@ -46,13 +46,13 @@ ul {
   background-repeat: no-repeat;
 }
 
-.cajas-personajes ul#personajes-list img {
+.cajas-personajes ul li img {
   max-width: 330%;
   max-height: 170px;
   border-radius: 3px;
 }
 
-.cajas-personajes ul#personajes-list dt {
+.cajas-personajes ul li dt {
   font-size: 20px;
   font-weight: bold;
   margin: 5px 0;
@@ -64,7 +64,7 @@ ul {
   text-transform: uppercase;
 }
 
-.cajas-personajes ul#personajes-list dd {
+.cajas-personajes ul li dd {
   font-size: 13px;
   font-weight: normal;
   margin: 5px 0;

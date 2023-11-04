@@ -1,6 +1,3 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
-
-
 export const filterData = (data, filterBy, value) => {
 //Creamos un array vacio para almacenar los resultados del filtro
 const filteredData= [];
@@ -26,11 +23,8 @@ export const sortData = (data, sortBy, sortOrder) => {
   return data; // No se puede ordenar, devuelve los datos sin cambios
 }
 
-// Clonamos los datos originales para evitar modificar el array original
-const clonedData = [...data];
-
-// Función de comparación para la ordenación
-const compareFunction = (a, b) => {
+const clonedData = [...data]; // Clonamos datos originales para evitar modificar array original
+const compareFunction = (a, b) => { // Función de comparación para la ordenación
   if (a[sortBy] < b[sortBy]) {
     return sortOrder === 'asc' ? -1 : 1;
   }
@@ -39,26 +33,23 @@ const compareFunction = (a, b) => {
   }
   return 0;
 };
-
-// Ordena el array clonado según el campo y el orden especificado
+// Ordenamos el array clonado según el campo y el orden especificado
 clonedData.sort(compareFunction);
 
 return clonedData;
-}
+};
 
-export const computeStats = data.reduce (
+export const computeStats = (data) => {
+  if (data.length === 0) {
+    return null; // Devolvemos null si no hay datos para calcular estadísticas
+  }
+
+  const stats = data.reduce(
   (acc, personaje) => {
-    // Incrementar el contador de personajes
-    acc.totalPersonajes++;
-
-    // Sumar la edad de los personajes
-    acc.totalEdad += personaje.edad;
-
-    // Encontrar la edad máxima
-    acc.maxEdad = Math.max(acc.maxEdad, personaje.edad);
-
-    // Encontrar la edad mínima
-    acc.minEdad = Math.min(acc.minEdad, personaje.edad);
+    acc.totalPersonajes++; // Incrementamos el contador de personajes
+    acc.totalEdad += personaje.edad; // Sumamos la edad de los personajes
+    acc.maxEdad = Math.max(acc.maxEdad, personaje.edad); // Encontramos la edad máxima
+    acc.minEdad = Math.min(acc.minEdad, personaje.edad); // Encontramos la edad mínima
 
     return acc;
   },
@@ -68,12 +59,4 @@ export const computeStats = data.reduce (
     maxEdad: Number.NEGATIVE_INFINITY, // Inicializar con el valor mínimo posible
     minEdad: Number.POSITIVE_INFINITY, // Inicializar con el valor máximo posible
   }
-)
-
-export const example = () => {
-  return "example";
-};
-
-export const anotherExample = () => {
-  return [];
-};
+)};

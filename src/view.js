@@ -1,8 +1,9 @@
 export const renderItems = (data) => {
   console.log("Datos recibidos:", data);
 
-  const container = document.getElementById("personajes-list");
+  const lista = document.createElement("ul")
   data.forEach((personaje) => {
+    const container = document.createElement("li")
     const personajeDiv = document.createElement("dl");
     personajeDiv.setAttribute("itemscope", "");
     personajeDiv.setAttribute("itemtype", "https://schema.org/Person");
@@ -14,6 +15,7 @@ export const renderItems = (data) => {
     <dt>Descripción:</dt><dd itemprop="description">${personaje.description}</dd>
 `;
     container.appendChild(personajeDiv);
+    lista.appendChild(container)
   });
-  return container;
+  return lista;
 };

@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log(renderItems(data), data);
 });
 
-let result = data;
-const rootRender = document.querySelector("#root");
-rootRender.appendChild(renderItems(result));
+let personajes = data;
+const root = document.getElementById("root");
+root.appendChild(renderItems(personajes));
 const filtroLetra = document.getElementById("filtro-letra");
 const filtroEdad = document.getElementById("filtro-edad");
 const filtroEstado = document.getElementById("filtro-estado");
@@ -25,32 +25,33 @@ function hideMenu() {
 }
 
 filtroLetra.addEventListener("change", (e) => {
-  const filteredLetra = e.target.value;
-  dataset = filterData(data, "letra", filteredLetra);
+  const ordered = e.target.value;
+  personajes = sortData(personajes, "name", ordered);
 
-  listContent.innerHTML = "";
-  listContent.appendChild(renderItems(dataset));
-  statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredLetra)`;
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+  //statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredLetra)`;
 });
 
 filtroEdad.addEventListener("change", (e) => {
   const filteredEdad = e.target.value;
-  dataset = filterData(data, "edad", filteredEdad);
+  personajes = filterData(personajes, "edad", filteredEdad);
 
-  listContent.innerHTML = "";
-  listContent.appendChild(renderItems(dataset));
-  statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredEdad)`;
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+  //statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredEdad)`;
 });
 
 filtroEstado.addEventListener("change", (e) => {
   const filteredEstado = e.target.value;
-  dataset = filterData(data, "estado", filteredEstado);
+  personajes = filterData(personajes, "estado", filteredEstado);
 
-  listContent.innerHTML = "";
-  listContent.appendChild(renderItems(dataset));
-  statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredEstado)`;
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+  //statsParagraph.innerHTML = `"Total results: " + stats(dataset, filteredEstado)`;
 });
 
-menuButton.addEventListener("click", showMenu);
+//
+//menuButton.addEventListener("click", showMenu);
 
-closeButton.addEventListener("click", hideMenu);
+//closeButton.addEventListener("click", hideMenu);
