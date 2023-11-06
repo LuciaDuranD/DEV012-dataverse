@@ -1,4 +1,4 @@
-const personajes = [
+export default [
   {
     id: "rick-grimes",
     name: "Rick Grimes",
@@ -339,5 +339,3 @@ const personajes = [
     },
   },
 ];
-
-export default personajes;

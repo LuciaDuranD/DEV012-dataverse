@@ -1,24 +1,60 @@
-import { filtroLet0, computeStats } from "./dataFunctions.js";
+import {
+  filterByAge,
+  filterByStatus,
+  filterByLetter,
+} from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
-const losPersonajes = document.getElementById("root");
-losPersonajes.appenChild(renderItems(data));
+document.addEventListener("DOMContentLoaded", function () {
+  console.log(renderItems(data), data);
+});
 
-const filtradoLetras = document.querySelector('[id="filtro-letra"]');
-const filtradoEdades = document.querySelector('[id="filtro-edad"]');
-const filtradoEstados = document.querySelector('[id="filtro-estado"]');
+let personajes = data;
+const root = document.getElementById("root");
+root.appendChild(renderItems(personajes));
+const filtroLetra = document.getElementById("filtro-letra");
+const filtroEdad = document.getElementById("filtro-edad");
+const filtroEstado = document.getElementById("filtro-estado");
 
-filtradoLetras.addEventListener("change", filtrados);
-filtradoEdades.addEventListener("change", filtrados);
-filtradoEstados.addEventListener("change", filtrados);
+//FILTRO POR LETRA//
+filtroLetra.addEventListener("change", (e) => {
+  const ordered = e.target.value;
+  personajes = filterByLetter(personajes, ordered);
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+});
 
-function filtrados() {
-  const indiceLetras = filtradoLetras.selectedIndex;
-  const optionSelect = filtradoLetras.options[indiceLetras];
-  const indiceEdades = filtradoEdades.selectedIndex;
-  const optionSelectEdades = filtradoEdades.options[indiceEdades];
-  const indiceEstados = filtradoEstados.selectedIndex;
-  const optionSelectEstados = filtradoEstados.options[indiceEstados];
-  losPersonajes.innerHTML = "";
-}
+//FILTRO POR EDAD//
+filtroEdad.addEventListener("change", () => {
+  console.log("filtroEdad change event");
+  const filteredEdad = filtroEdad.value;
+  personajes = filterByAge(data, filteredEdad);
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+});
+
+//FILTRO POR ESTADO//
+filtroEstado.addEventListener("change", () => {
+  console.log("filtroEstado change event");
+  const filteredEstado = filtroEstado.value;
+  personajes = filterByStatus(data, filteredEstado);
+  root.innerHTML = "";
+  root.appendChild(renderItems(personajes));
+});
+
+//BOTON DE BORRAR//
+const botonClear = document.querySelector("[data-testid=button-clear]");
+
+botonClear.addEventListener("click", () => {
+  filtroLetra.selectedIndex = 0;
+  filtroEdad.selectedIndex = 0;
+  filtroEstado.selectedIndex = 0;
+
+  root.innerHTML = "";
+  root.appendChild(renderItems(data));
+
+  letraFiltro = null;
+  edadFiltro = null;
+  estadoFiltro = null;
+});
