@@ -61,8 +61,8 @@ export const filterByAge = (data, ageRange) => {
   const sortedData = [...data];
 
   sortedData.sort((a, b) => {
-    const ageA = a.facts.age || 0;
-    const ageB = b.facts.age || 0;
+    const ageA = a.facts.age ? parseInt(a.facts.age) : 0;
+    const ageB = b.facts.age ? parseInt(b.facts.age) : 0;
 
     if (ageRange === "edadMenor") {
       return ageA - ageB;
