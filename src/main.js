@@ -2,12 +2,15 @@ import {
   filterByAge,
   filterByStatus,
   filterByLetter,
+  computeStats,
 } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   console.log(renderItems(data), data);
+  const stats = computeStats(data);
+  console.log(stats);
 });
 
 let personajes = data;
@@ -53,8 +56,4 @@ botonClear.addEventListener("click", () => {
 
   root.innerHTML = "";
   root.appendChild(renderItems(data));
-
-  letraFiltro = null;
-  edadFiltro = null;
-  estadoFiltro = null;
 });

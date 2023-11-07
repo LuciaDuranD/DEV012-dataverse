@@ -1,23 +1,24 @@
 export const filterData = (data, filterBy, value) => {
-  const filteredData = [];
-
-  for (const personaje of data) {
-    if (personaje.hasOwnProperty(filterBy)) {
-      if (personaje[filterBy] === value) {
-        filteredData.push(personaje);
-      }
-    }
+  if (!data || !Array.isArray(data)) {
+    return [];
   }
+
+  const filteredData = data.filter((personaje) => {
+    return personaje.hasOwnProperty(filterBy) && personaje[filterBy] === value;
+  });
 
   return filteredData;
 };
 
 export const sortData = (data, sortBy, sortOrder) => {
-  if (data.length === 0 || !data[0].hasOwnProperty(sortBy)) {
+  if (
+    !Array.isArray(data) ||
+    data.length === 0 ||
+    !data[0].hasOwnProperty(sortBy)
+  ) {
     return data;
   }
 
-  const clonedData = [...data];
   const compareFunction = (a, b) => {
     if (a[sortBy] < b[sortBy]) {
       return sortOrder === "asc" ? -1 : 1;
@@ -28,9 +29,31 @@ export const sortData = (data, sortBy, sortOrder) => {
     return 0;
   };
 
-  clonedData.sort(compareFunction);
+  return [...data].sort(compareFunction);
+};
 
-  return clonedData;
+export const computeStats = (data) => {
+  if (data.length === 0) {
+    return null; // Devolver null si no hay datos para calcular estadísticas
+  }
+  const stats = data.reduce(
+    (acc, personaje) => {
+      acc.totalPersonajes++; // Incrementar el contador de personajes
+      acc.totalEdad += personaje.edad; // Sumar la edad de los personajes
+      acc.maxEdad = Math.max(acc.maxEdad, personaje.edad); // Encontrar la edad máxima
+      acc.minEdad = Math.min(acc.minEdad, personaje.edad); // Encontrar la edad mínima
+      return acc;
+    },
+    {
+      totalPersonajes: 0,
+      totalEdad: 0,
+      maxEdad: Number.NEGATIVE_INFINITY, // Inicializar con el valor mínimo posible
+      minEdad: Number.POSITIVE_INFINITY, // Inicializar con el valor máximo posible
+    }
+  );
+  // Calcular la edad promedio dividiendo la suma de edades por el número de personajes
+  stats.averageEdad = stats.totalEdad / stats.totalPersonajes;
+  return stats;
 };
 
 // FILTRADO POR EDAD//
