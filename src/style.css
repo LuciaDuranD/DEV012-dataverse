@@ -22,7 +22,6 @@ body {
       rgba(11, 14, 19, 0.425) 100%
     ),
     url("./Imagenes/Fondos/fondoCaja.png");
-  background-color: #333;
   color: white;
   padding: 10px;
   transition: left 0.3s;
@@ -52,6 +51,7 @@ body {
 }
 
 select {
+  margin-top: 18px;
   background: transparent;
   color: rgb(245, 205, 205);
   border: 2px solid rgba(255, 255, 255, 0.562);
@@ -64,14 +64,20 @@ select option {
 }
 
 select option[disabled] {
-  background-color: #701c1c; /* Fondo oscuro */
-  color: #fff; /* Texto blanco */
+  background-color: #701c1c;
+  color: #fff;
 }
 
 h1 {
-  text-shadow: 6px 6px 12px rgba(190, 16, 16, 0.486);
+  text-shadow: 10px 10px 20px rgba(190, 16, 16, 0.938);
   text-align: auto;
   font-size: 60px;
+}
+
+p {
+  text-shadow: 6px 6px 12px rgba(190, 16, 16, 0.904);
+  text-align: auto;
+  font-size: 25px;
 }
 
 .boton-clear {
@@ -199,9 +205,21 @@ dd {
   }
 
   h1 {
-    font-size: 17.8px;
+    font-size: 22px;
+    padding: 2px;
+    margin-top: 14px;
+  }
+
+  p {
+    font-size: 9px;
     padding: 4px;
-    margin-top: -10px;
+    margin-top: 13px;
+  }
+
+  select {
+    font-size: 10.5px;
+    padding: 7px;
+    margin-top: 13px;
   }
 
   .creditos {
@@ -214,8 +232,8 @@ dd {
     color: #cdd8d3f5;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
 
   .boton-clear button[data-testid="button-clear"] {
