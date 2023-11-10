@@ -7,7 +7,7 @@ import {
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
-let personajes = data; // Mantén una copia original de los datos sin filtrar
+const personajes = data; // Mantén una copia original de los datos sin filtrar
 const root = document.getElementById("root");
 
 function applyFilters() {

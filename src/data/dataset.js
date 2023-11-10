@@ -112,7 +112,7 @@ export default [
     imageUrl: "./Imagenes/rosita espinoza.png",
     facts: {
       age: "30",
-      status: "Muerto",
+      status: "Vivo",
       mainField: "Tiro y relaciones personales",
     },
   },

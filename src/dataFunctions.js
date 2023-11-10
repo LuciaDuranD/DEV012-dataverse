@@ -4,18 +4,14 @@ export const filterData = (data, filterBy, value) => {
   }
 
   const filteredData = data.filter((personaje) => {
-    return personaje.hasOwnProperty(filterBy) && personaje[filterBy] === value;
+    return personaje.facts[filterBy] === value;
   });
 
   return filteredData;
 };
 
 export const sortData = (data, sortBy, sortOrder) => {
-  if (
-    !Array.isArray(data) ||
-    data.length === 0 ||
-    !data[0].hasOwnProperty(sortBy)
-  ) {
+  if (!Array.isArray(data) || data.length === 0) {
     return data;
   }
 
