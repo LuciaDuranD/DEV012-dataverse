@@ -9,12 +9,12 @@ import data from "./data/dataset.js";
 
 // COPIA ORIGINAL SIN FILTROS
 const personajes = data;
-const root = document.getElementById("root");
+const root = document.querySelector("#root");
 
 function applyFilters() {
-  const letraFiltro = document.getElementById("filtro-letra").value;
-  const edadFiltro = document.getElementById("filtro-edad").value;
-  const estadoFiltro = document.getElementById("filtro-estado").value;
+  const letraFiltro = document.querySelector("#filtro-letra").value;
+  const edadFiltro = document.querySelector("#filtro-edad").value;
+  const estadoFiltro = document.querySelector("#filtro-estado").value;
 
   // FLTRO POR LETRA, EDAD Y ESTADO
   let filteredData = [...personajes]; // ... HACE LA COPIA DEL ARRAY DE LOS DATOS ORIGINALES
@@ -34,13 +34,13 @@ function applyFilters() {
   root.innerHTML = "";
   root.appendChild(renderItems(filteredData));
 
-  // Calcular estadísticas y mostrarlas
+  //CALCULA Y MUESTRA LAS ESTADISTICAS
   const stats = computeStats(filteredData);
   showStats(stats);
 }
 
 function showStats(stats) {
-  // Mostrar la estadística en el HTML
+  // MUESTRA LAS ESTADISTICAS EN EL HTML
   const personajesLabel = document.querySelector('label[name="personajes"]');
   const hombresLabel = document.querySelector('label[name="hombres"]');
   const mujeresLabel = document.querySelector('label[name="mujeres"]');
@@ -56,19 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // CAMBIA LOS FILTROS Y LOS APLICA
 document
-  .getElementById("filtro-letra")
+  .querySelector("#filtro-letra")
   .addEventListener("change", applyFilters);
-document.getElementById("filtro-edad").addEventListener("change", applyFilters);
+document.querySelector("#filtro-edad").addEventListener("change", applyFilters);
 document
-  .getElementById("filtro-estado")
+  .querySelector("#filtro-estado")
   .addEventListener("change", applyFilters);
 
 // BOTON PARA BORRAR
 const botonClear = document.querySelector("[data-testid=button-clear]");
 botonClear.addEventListener("click", () => {
-  document.getElementById("filtro-letra").selectedIndex = 0;
-  document.getElementById("filtro-edad").selectedIndex = 0;
-  document.getElementById("filtro-estado").selectedIndex = 0;
+  document.querySelector("#filtro-letra").selectedIndex = 0;
+  document.querySelector("#filtro-edad").selectedIndex = 0;
+  document.querySelector("#filtro-estado").selectedIndex = 0;
 
   // RESTABLECER DATOS
   applyFilters();

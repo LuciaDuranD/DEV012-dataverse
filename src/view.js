@@ -9,7 +9,7 @@ export const renderItems = (data) => {
       <dt>Nombre:</dt><dd itemprop="name">${personaje.name}</dd>
       <dt>Edad:</dt><dd itemprop="age">${personaje.facts.age}</dd>
       <dt>Estado:</dt><dd itemprop="status">${personaje.facts.status}</dd>
-      <dt>Genero:</dt><dd itemprop="gender">${personaje.facts.gender}</dd>
+      <dt>Género:</dt><dd itemprop="gender">${personaje.facts.gender}</dd>
       <dt>Descripción:</dt><dd itemprop="description">${personaje.description}</dd>
     `;
 
@@ -19,6 +19,9 @@ export const renderItems = (data) => {
   const lista = document.createElement("ul");
   data.forEach((personaje) => {
     const container = document.createElement("li");
+    //CLASS LI
+    container.classList.add("lis");
+
     container.appendChild(createPersonajeElement(personaje));
     lista.appendChild(container);
   });
