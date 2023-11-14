@@ -32,23 +32,27 @@ export const computeStats = (data) => {
   if (data.length === 0) {
     return null; // Devolver null si no hay datos para calcular estadísticas
   }
+
   const stats = data.reduce(
     (acc, personaje) => {
       acc.totalPersonajes++; // Incrementar el contador de personajes
-      acc.totalEdad += personaje.edad; // Sumar la edad de los personajes
-      acc.maxEdad = Math.max(acc.maxEdad, personaje.edad); // Encontrar la edad máxima
-      acc.minEdad = Math.min(acc.minEdad, personaje.edad); // Encontrar la edad mínima
+
+      // Verificar el género y aumentar el contador correspondiente
+      if (personaje.facts.gender === "Hombre") {
+        acc.totalHombres++;
+      } else if (personaje.facts.gender === "Mujer") {
+        acc.totalMujeres++;
+      }
+
       return acc;
     },
     {
       totalPersonajes: 0,
-      totalEdad: 0,
-      maxEdad: Number.NEGATIVE_INFINITY, // Inicializar con el valor mínimo posible
-      minEdad: Number.POSITIVE_INFINITY, // Inicializar con el valor máximo posible
+      totalHombres: 0,
+      totalMujeres: 0,
     }
   );
-  // Calcular la edad promedio dividiendo la suma de edades por el número de personajes
-  stats.averageEdad = stats.totalEdad / stats.totalPersonajes;
+
   return stats;
 };
 

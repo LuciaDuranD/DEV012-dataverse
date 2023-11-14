@@ -10,6 +10,7 @@ export default [
       age: "49",
       status: "Vivo",
       mainField: "Liderazgo y supervivencia",
+      gender: "Hombre",
     },
   },
   {
@@ -23,6 +24,7 @@ export default [
       age: "56",
       status: "Vivo",
       mainField: "Liderazgo y brutalidad",
+      gender: "Hombre",
     },
   },
   {
@@ -36,6 +38,7 @@ export default [
       age: "45",
       status: "Vivo",
       mainField: "Caza y rastreo",
+      gender: "Hombre",
     },
   },
   {
@@ -49,6 +52,7 @@ export default [
       age: "41",
       status: "Vivo",
       mainField: "Liderazgo y agricultura",
+      gender: "Mujer",
     },
   },
   {
@@ -62,6 +66,7 @@ export default [
       age: "15",
       status: "Muerto",
       mainField: "Supervivencia y crecimiento",
+      gender: "Hombre",
     },
   },
   {
@@ -75,6 +80,7 @@ export default [
       age: "25",
       status: "Muerto",
       mainField: "Búsqueda de suministros y optimismo",
+      gender: "Hombre",
     },
   },
   {
@@ -88,6 +94,7 @@ export default [
       age: "35",
       status: "Vivo",
       mainField: "Combate con katana y protección",
+      gender: "Mujer",
     },
   },
   {
@@ -101,6 +108,7 @@ export default [
       age: "35",
       status: "Muerto",
       mainField: "Supervivencia y conflicto",
+      gender: "Hombre",
     },
   },
   {
@@ -114,6 +122,7 @@ export default [
       age: "30",
       status: "Vivo",
       mainField: "Tiro y relaciones personales",
+      gender: "Mujer",
     },
   },
   {
@@ -127,6 +136,7 @@ export default [
       age: "45",
       status: "Vivo",
       mainField: "Liderazgo y adaptabilidad",
+      gender: "Mujer",
     },
   },
   {
@@ -140,6 +150,7 @@ export default [
       age: "11",
       status: "Vivo",
       mainField: "Supervivencia infantil",
+      gender: "Mujer",
     },
   },
   {
@@ -153,6 +164,7 @@ export default [
       age: "57",
       status: "Vivo",
       mainField: "Supervivencia y artes marciales",
+      gender: "Hombre",
     },
   },
   {
@@ -166,6 +178,7 @@ export default [
       age: "18",
       status: "Muerto",
       mainField: "Canto y valentía",
+      gender: "Mujer",
     },
   },
   {
@@ -179,6 +192,7 @@ export default [
       age: "65",
       status: "Muerto",
       mainField: "Agricultura y medicina",
+      gender: "Hombre",
     },
   },
   {
@@ -192,6 +206,7 @@ export default [
       age: "50",
       status: "Muerto",
       mainField: "Liderazgo y brutalidad",
+      gender: "Hombre",
     },
   },
   {
@@ -205,6 +220,7 @@ export default [
       age: "40",
       status: "Muerto",
       mainField: "Valentía y compasión",
+      gender: "Hombre",
     },
   },
   {
@@ -218,6 +234,7 @@ export default [
       age: "35",
       status: "Muerto",
       mainField: "Armas de fuego y protección",
+      gender: "Mujer",
     },
   },
   {
@@ -231,6 +248,7 @@ export default [
       age: "35",
       status: "Muerto",
       mainField: "Protección de la familia",
+      gender: "Mujer",
     },
   },
   {
@@ -244,6 +262,7 @@ export default [
       age: "65",
       status: "Muerto",
       mainField: "Sabiduría y resolución de conflictos",
+      gender: "Hombre",
     },
   },
   {
@@ -257,6 +276,7 @@ export default [
       age: "40",
       status: "Muerto",
       mainField: "Liderazgo autoritario",
+      gender: "Hombre",
     },
   },
   {
@@ -270,6 +290,7 @@ export default [
       age: "35",
       status: "Vivo",
       mainField: "Ciencia y tecnología",
+      gender: "Hombre",
     },
   },
   {
@@ -284,6 +305,7 @@ export default [
       age: "30",
       status: "Muerto",
       mainField: "Combate y exploración",
+      gender: "Hombre",
     },
   },
   {
@@ -297,6 +319,7 @@ export default [
       age: "12",
       status: "Muerto",
       mainField: "Supervivencia infantil y perturbación",
+      gender: "Mujer",
     },
   },
   {
@@ -310,6 +333,7 @@ export default [
       age: "30",
       status: "Muerto",
       mainField: "Policía y supervivencia",
+      gender: "Mujer",
     },
   },
   {
@@ -323,6 +347,7 @@ export default [
       age: "45",
       status: "Muerto",
       mainField: "Militar y lucha",
+      gender: "Hombre",
     },
   },
   {
@@ -336,6 +361,7 @@ export default [
       age: "48",
       status: "Vivo",
       mainField: "Liderazgo y protección del Reino",
+      gender: "Hombre",
     },
   },
 ];
