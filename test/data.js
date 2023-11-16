@@ -13,6 +13,7 @@ export const data = [
       age: "49",
       status: "Vivo",
       mainField: "Liderazgo y supervivencia",
+      gender: "Hombre"
     },
   },
   {
@@ -55,3 +56,5 @@ export const data = [
     },
   },
 ];
+
+
