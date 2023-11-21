@@ -283,7 +283,7 @@ footer {
   }
   .boton-clear {
     text-align: center;
-    font-size: 22px; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 22px; 
     text-shadow: 2px 2px 4px rgba(190, 16, 16, 0.486);
     color: #cdd8d3f5;
     font-weight: bold;
@@ -296,7 +296,7 @@ footer {
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(to bottom, #682522d5, #427279);
     color: #a4cdd4;
-    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    padding: 10px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -304,8 +304,8 @@ footer {
     box-shadow: 2px 2px 4px rgba(190, 16, 16, 0.486);
     transition: background 0.3s, transform 0.3s;
     text-shadow: 2px 2px 4px rgba(190, 16, 16, 0.486);
-    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
-    margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .boton-clear button[data-testid="button-clear"]:hover {
