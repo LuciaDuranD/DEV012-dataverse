@@ -5,8 +5,8 @@
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Consideraciones técnicas](#5-consideraciones-técnicas)
-  [4. Prototipos de Diseño](#4-prototipos-de-Diseño)
-  [5. Diseños Finales (WEB y Movil)](#4-Diseños-Finales)
+* [4. Prototipos de Diseño](#4-prototipos-de-Diseño)
+* [5. Diseños Finales (WEB y Movil)](#4-Diseños-Finales)
 
 ***
 
