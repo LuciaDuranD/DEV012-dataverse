@@ -218,7 +218,7 @@ footer {
   }
 
   .menu {
-    width: 127%;
+    width: 150%;
     font-size: 92px;
     height: 100px;
   }
@@ -239,7 +239,7 @@ footer {
 
   ul {
     margin-top: 1px;
-    width: 132%;
+    width: 150%;
     margin-right: 20px;
   }
 
@@ -252,14 +252,14 @@ footer {
   .datos {
     font-size: 20px;
     margin-top: 18px;
-    width: 129%;
+    width: 155%;
   }
 
   h2 {
     font-size: 50px;
     padding: 2px;
     margin-top: 6px;
-    width: 129%;
+    width: 155%;
   }
 
   p {
@@ -283,7 +283,7 @@ footer {
   }
   .boton-clear {
     text-align: center;
-    font-size: 22px; 
+    font-size: 22px;
     text-shadow: 2px 2px 4px rgba(190, 16, 16, 0.486);
     color: #cdd8d3f5;
     font-weight: bold;
