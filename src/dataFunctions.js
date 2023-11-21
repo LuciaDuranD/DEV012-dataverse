@@ -10,16 +10,19 @@ export const filterData = (data, filterBy, value) => {
   return filteredData;
 };
 
-export const sortData = (data, sortBy, sortOrder) => {
+export const sortData = (data, sortBy, sortOrder = "asc") => {
   if (!Array.isArray(data) || data.length === 0) {
     return data;
   }
 
   const compareFunction = (a, b) => {
-    if (a[sortBy] < b[sortBy]) {
+    const valueA = sortBy.split(".").reduce((obj, key) => obj[key], a);
+    const valueB = sortBy.split(".").reduce((obj, key) => obj[key], b);
+
+    if (valueA < valueB) {
       return sortOrder === "asc" ? -1 : 1;
     }
-    if (a[sortBy] > b[sortBy]) {
+    if (valueA > valueB) {
       return sortOrder === "asc" ? 1 : -1;
     }
     return 0;
@@ -37,7 +40,12 @@ export const computeStats = (data) => {
     (acc, personaje) => {
       acc.totalPersonajes++; // Incrementar el contador de personajes
 
-      // Verificar el género y aumentar el contador correspondiente
+      // Verificar el estado y aumentar el contador correspondiente
+      if (personaje.facts.status === "Vivo") {
+        acc.totalVivos++;
+      }
+
+      // Otra lógica de conteo relacionada con el género permanece igual...
       if (personaje.facts.gender === "Hombre") {
         acc.totalHombres++;
       } else if (personaje.facts.gender === "Mujer") {
@@ -48,6 +56,7 @@ export const computeStats = (data) => {
     },
     {
       totalPersonajes: 0,
+      totalVivos: 0, // Inicializar el contador totalVivos
       totalHombres: 0,
       totalMujeres: 0,
     }

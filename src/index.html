@@ -14,23 +14,26 @@
         <img class="sangre" src="./Imagenes/Mobile/Sangre.png" alt="SANGRE" />
         <h1>TWD</h1>
         <p>Filtrar por:</p>
+        <label class="sele" for="filtro-letra">1</label>
         <select id="filtro-letra" data-testid="select-sort" name="type">
-          <option value="Letra" disabled selected>Nombre</option>
+          <option value="Letra" disabled selected>Letra</option>
           <option value="asc">A-Z</option>
           <option value="desc">Z-A</option>
         </select>
+        <label class="sele" for="filtro-edad">2</label>
         <select id="filtro-edad" data-testid="select-sort" name="type">
           <option value="Edad" disabled selected>Edad</option>
           <option value="edadMenor">0-70</option>
           <option value="edadMayor">70-0</option>
         </select>
+        <label class="sele" for="filtro-estado">3</label>
         <select id="filtro-estado" data-testid="select-sort" name="type">
           <option value="V/M" disabled selected>Estado de Vida</option>
           <option value="vivo">Vivo</option>
           <option value="muerto">Muerto</option>
         </select>
         <div class="boton-clear">
-          <button data-testid="button-clear">Clear</button>
+          <button data-testid="button-clear">CLEAR</button>
         </div>
       </div>
     </header>

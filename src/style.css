@@ -26,7 +26,7 @@ header {
     ),
     url("./Imagenes/Fondos/fondoCaja.png");
   color: white;
-  padding: 19px;
+  padding: 24px;
   transition: left 0.3s;
   text-align: center;
   font-size: 25px;
@@ -55,13 +55,23 @@ header {
   margin-left: 715px;
 }
 
+.sele {
+  margin-top: 6px;
+  background: transparent;
+  color: #ddcdcdee;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  text-shadow: 10px 10px 20px rgba(190, 16, 16, 0.938);
+}
+
 select {
-  margin-top: 18px;
+  font-size: 16px;
+  margin-top: 6px;
   background: transparent;
   color: rgb(245, 205, 205);
   border: 2px solid rgba(255, 255, 255, 0.562);
   margin-bottom: 5px;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 select option {
@@ -93,7 +103,7 @@ h2 {
   text-shadow: 10px 10px 20px rgba(190, 16, 16, 0.938);
   text-align: center;
   font-size: 25px;
-  color: #ffffffee;
+  color: #f5ececee;
   margin-top: 10px;
 }
 p {
@@ -104,7 +114,7 @@ p {
 
 .boton-clear {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   text-shadow: 3px 3px 8px rgba(190, 16, 16, 0.486);
   color: #cdd8d3f5;
   font-weight: bold;
@@ -144,56 +154,17 @@ ul {
   margin: 0;
 }
 
-.dark-theme {
-  border: 2px solid #a10f0f4b;
-  border-radius: 20px;
-  box-shadow: 2px 2px 7px rgba(190, 16, 16, 0.486);
-  width: 45%;
-  max-height: 500px;
-  background: linear-gradient(
-    180deg,
-    rgba(41, 97, 104, 0.541) 0%,
-    rgba(11, 14, 19, 0.685) 100%
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* Otros estilos específicos para la temática oscura */
-}
-
-.dark-theme img {
-  max-width: 300%;
-  max-height: 190px;
-  border-radius: 2px;
-}
-
-.dark-theme dt {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 5px 0;
-  background: #a10f0f6c;
-  color: rgb(232, 238, 229);
-  padding: 5px 9px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-}
-
-.dark-theme dd {
-  font-size: 9.3px;
-  font-weight: normal;
-  margin: 5px 0;
-}
-
 .lis {
   color: #cfdbd9;
-  padding: 60px; /* Agrega un relleno según sea necesario */
-  margin: 20px; /* Agrega márgenes según sea necesario */
+  padding: 60px;
+  margin: 24px;
   border: 2px solid #a10f0f4b;
-  border-radius: 20px;
+  border-radius: 26px;
   box-shadow: 2px 2px 7px rgba(190, 16, 16, 0.486);
-  width: 45%;
+  width: 50%;
+  height: 150%;
   text-align: center;
-  max-height: 500px;
+  max-height: 528px;
   background: linear-gradient(
     180deg,
     rgba(41, 97, 104, 0.541) 0%,
@@ -205,24 +176,24 @@ ul {
 
 img {
   max-width: 300%;
-  max-height: 190px;
-  border-radius: 2px;
+  max-height: 185px;
+  border-radius: 1px;
 }
 
 dt {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  margin: 5px 0;
+  margin: 4px 0;
   background: #a10f0f6c;
   color: rgb(232, 238, 229);
-  padding: 5px 9px;
+  padding: 3px 4px;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
 }
 
 dd {
-  font-size: 9.3px;
+  font-size: 12px;
   font-weight: normal;
   margin: 5px 0;
 }
@@ -247,8 +218,8 @@ footer {
   }
 
   .menu {
-    width: 113%;
-    font-size: 89px;
+    width: 127%;
+    font-size: 92px;
     height: 100px;
   }
 
@@ -262,42 +233,48 @@ footer {
     margin: 0;
   }
 
-  li {
-    width: 80%;
+  .lis {
+    width: 73%;
   }
 
   ul {
-    width: 109.6%;
+    margin-top: 1px;
+    width: 132%;
+    margin-right: 20px;
   }
 
   h1 {
-    font-size: 22px;
+    font-size: 26px;
     padding: 2px;
     margin-top: 14px;
   }
 
   .datos {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 18px;
-    width: 120%;
+    width: 129%;
   }
 
   h2 {
     font-size: 50px;
     padding: 2px;
-    margin-top: 14px;
-    width: 120%;
+    margin-top: 6px;
+    width: 129%;
   }
 
   p {
-    font-size: 9px;
+    font-size: 12px;
     padding: 4px;
     margin-top: 13px;
   }
 
-  select {
+  .sele {
     font-size: 10.5px;
     padding: 7px;
+  }
+  select {
+    font-size: 12px;
+    padding: 10px;
     margin-top: 13px;
   }
 
@@ -306,13 +283,13 @@ footer {
   }
   .boton-clear {
     text-align: center;
-    font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 22px; /* Ajusta el tamaño del texto según sea necesario */
     text-shadow: 2px 2px 4px rgba(190, 16, 16, 0.486);
     color: #cdd8d3f5;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-bottom: 7px;
   }
 
   .boton-clear button[data-testid="button-clear"] {
