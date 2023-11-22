@@ -1,92 +1,135 @@
+//FILTRA LOS OBJETOS ACORDE A CIERTOS CRITERIOS//
 export const filterData = (data, filterBy, value) => {
   if (!data || !Array.isArray(data)) {
     return [];
+    // COMPRUEBA SI LA DATA NO ESTA DEFINIDA O SI NO ES ARRAY SI ALGUNA DE ESAS SE CUMPLE RETORNA UN ARRAY VACIO ESTO EVITA QUE LA FUNCION NO GENERE ERRORES//
   }
   const filteredData = data.filter((personaje) => {
+    //UTITLIZA EL FILTERBY EN EL ARRAY DATA Y CREA UN ARRAY DONDE SE CUMPLAN LOS PARAMENTROS DE LOS ELEMENTOS DE FILTRADO//
     return personaje.facts[filterBy] === value;
   });
+  //EVALUA CADA PERSONAJE DEL ARRAY DATA DEL FACTS USANDO EL VALOR FILTERBY COMO CLAVE PARA LUEGO COMPARAR EL VALOR OBTENIDO CON EL VALOR PROPORCIONADO DEL VALUE//
   return filteredData;
 };
+//DEVUELVE UN NUEVO ARRAY QUE CONTIENE UNICAMENTE LOS ELEMENTOS QUE CUMPLEN CON EL CRITERIO DE FILTRADO QUE SE LE DEFINA ESPECIFICADO POR FILTERBY Y VALUE//
+
+//ORDENA LOS OBJETOS SEGUN UNA CLAVE ESPECIFICA//
 export const sortData = (data, sortBy, sortOrder = "asc") => {
+  //SORTBY (EL CRITERIO DE ORDEN) Y SORTORDER (LA DIRECCION DE ORDEN ASCENDENTE POR DEFEECTO)//
   if (!Array.isArray(data) || data.length === 0) {
     return data;
   }
+  //VERIFICA SI NO ES UN ARRAY O SI ESTA VACIO SI ES ASI RETORNA LA DATA SIN CAMBIOS//
   const compareFunction = (a, b) => {
+    //FUNCION DE COMPARACION PERSONALIZADA POR EL SORT DONDE ORDEN EL ARRAY COMPARANDO DOS ELEMENTOS QUE SON A Y B SEGUN SORTBY//
     const valueA = sortBy.split(".").reduce((obj, key) => obj[key], a);
     const valueB = sortBy.split(".").reduce((obj, key) => obj[key], b);
+    //EL METODO SPLIT DIVIDI UN SPRING EN UN ARRAY DE SUBSPRING COMO UN SEPARADOR//
+    //PARA LAS LINES 23 - 24 EL SPLIT DIVIDI EL SPRING DE SORTBY POR PUNTOS SI ESTOS EXISTEN Y LUEGO EL REDUCER PARA ACCEDER AL VALOR ESPECIFICO DEL OBJETO A Y B BASADOS EN LA ESTRUCTURA DE CLAVES DEL SORTBY//
     if (valueA < valueB) {
       return sortOrder === "asc" ? -1 : 1;
     }
     if (valueA > valueB) {
       return sortOrder === "asc" ? 1 : -1;
     }
+    //SE REALIZA LA LOGICA DE COMPARACION CON VALUEA Y VALUEB PARA DETERMINAR EL ORDEN ESTO DEPENDE DE LA CONDICION SE RETORNA -1, 1 O 0 ESTO EN FUNCION DE SI VALUEA ES MENOR, MAYOS O IGUAL A VALUEB//
     return 0;
   };
   return [...data].sort(compareFunction);
+  //SE HACE UNA COPIA DEL ARRAY DATA SE LE APLICA EL METODO SORTBY CON UN ORDEN OPCIONAL DE SORTORDER//
 };
+
+//CALCULA LAS ESTADISTICAS SOBRE EL CONJUNTO DE DATOS//
 export const computeStats = (data) => {
   if (data.length === 0) {
-    return null; // Devolver null si no hay datos para calcular estadísticas
+    return null;
   }
+  //VERIFICA SI LA LONGITUD DEL ARRAY DATA ES IGUAL A 0 Y SI ESTE ESTA VACIO RETORNA NULL//
   const stats = data.reduce(
+    //USAMOS REDUCER PARA QUE ITERE SOBRE CADA ELEMENTO DEL ARRAY Y ACUMULE UN RESULTADO//
     (acc, personaje) => {
-      acc.totalPersonajes++; // Incrementar el contador de personajes
-      // Verificar el estado y aumentar el contador correspondiente
+      //REDUCE UTILIZA CADA ITERACION, TOMANDO DOS PARAMENTROS ACC - EL ACUMULADOR QUE VA RECLECTANDO LOS RESULTADOS PARCIALES Y PERSONAJES - EL OBJETO ACTUAL DEL ARRAY//
+      acc.totalPersonajes++;
+      //INCREMENTA EL CONTADOR TOTALPESONAJES EN EL ACC POR CADA ITERACION Y ASI CUENTA EL TOTAL DE PERSONAJES//
       if (personaje.facts.status === "Vivo") {
         acc.totalVivos++;
       }
-      // Otra lógica de conteo relacionada con el género permanece igual...
+      //VERIFICA SI EL PERSONAJE ESTA VIVO SI CUMPLE INCREMENTA EL TOTALVIVOS EL ACC CUENTA EL NUMERO TOTAL DE PERSONAJES VIVOS//
       if (personaje.facts.gender === "Hombre") {
         acc.totalHombres++;
+        //VERIFICA SI EL PERSONAJE ES HOMBRE SI CUMPLE INCREMENTA EL TOTALHOMBRES EL ACC CUENTA EL NUMERO TOTAL DE PERSONAJES HOMBRES//
       } else if (personaje.facts.gender === "Mujer") {
         acc.totalMujeres++;
+        //VERIFICA SI EL PERSONAJE ES MUJER SI CUMPLE INCREMENTA EL TOTALMUJERES EL ACC CUENTA EL NUMERO TOTAL DE PERSONAJES MUJERES//
       }
       return acc;
     },
     {
       totalPersonajes: 0,
-      totalVivos: 0, // Inicializar el contador totalVivos
+      totalVivos: 0,
       totalHombres: 0,
       totalMujeres: 0,
     }
+    //ESTE EL EL OBJETO TOTAL DEL ACUMULADO DE ACC EN EL METODO REDUCE INICIA EN 0 PARA IR INCREMENTANDO EL CONTEO//
   );
   return stats;
 };
+//DEVUELVE EL OBJETO STATS DONDE ESTA LAS ESTADISTICAS RECOPILADA DE LOS PERSONAJES//
+
 // FILTRADO POR EDAD//
 export const filterByAge = (data, ageRange) => {
   const sortedData = [...data];
+  //SE HACE UNA COPIA DEL ARRAY Y ESTA SE LLAMA SORTEDDATA//
   sortedData.sort((a, b) => {
+    //USAMOS SORT PARA ORDENAR EL ARRAY//
     const ageA = a.facts.age ? parseInt(a.facts.age) : 0;
     const ageB = b.facts.age ? parseInt(b.facts.age) : 0;
+    //LA FUNCION DE PARSEINT ANALIZA LOS SPRINT Y LOS DEVUELVE EN NUMEROS ENTEROS//
+    //EN LAS LINEA 64 - 63 SACAMOS LAS EDADES DE LOS PERSONAJES A Y B DEL ARRAY SI ESTOS NO ESTAN PRESENTES O NO SON VALIDOS RETORNA 0//
     if (ageRange === "edadMenor") {
       return ageA - ageB;
+      //ESTE AGERANGE AL SER EL DE MENOR EDAD RETORNA LAS DIFERENCIAS DE AGEA Y AGEB ORDENANDOLOS DE MENOS A MAYOR//
     } else if (ageRange === "edadMayor") {
       return ageB - ageA;
+      //ESTE AGERANGE AL SER EL DE MAYOR EDAD RETORNA LAS DIFERENCIAS DE AGEB Y AGEA ORDENANDOLOS DE MAYOR A MENOR//
     } else {
       return 0;
+      //SI NO CUMPLE NIGUNO DEVUELVE 0//
     }
   });
   return sortedData;
 };
+
 // FILTRADO POR ESTADO//
 export const filterByStatus = (data, status) => {
   if (status === "vivo") {
+    //VERIFICA EL VALOR DE STATUS//
     return data.filter((personaje) => personaje.facts.status === "Vivo");
+    //SI EL ESTADO DEL PERSONAJE EN LA DATA ES VIVO EJECUTA EL DATA.FILTER GENERA UN ARRAY BASADO EN LA CONDICION DE FILTER DONDE SOLO SELECCIONA LOS FACT.STATUS DE LA DATA VIVOS//
   } else if (status === "muerto") {
+    //SI IF NO SE CUMPLE Y EN CAMBIO RETORNA LOS RESULTADOS DE DE FACT.STATUS MUERTOS//
     return data.filter((personaje) => personaje.facts.status === "Muerto");
+    //ACA AL IGUAL QUE EN LA LINEA 79 HACEMOS LO MISMO PERO EN VEZ DE VIVO PEDIMOS LOS MUERTOS//
   } else {
     return data;
+    //SI NO CUMPLE NINGUN PARAMETRO NOS DEVUELVE LA DATA TAL CUAL COMO ESTA//
   }
 };
+
 // FILTRADO POR LETRA//
 export const filterByLetter = (data, order) => {
   return data.sort((a, b) => {
+    //TOMA A SORT DONDE TOMA DOS ELEMENTOS ARRAY A Y B DEVUELVE VALOR NEGATIVO SI A ESTA ANTES DE B Y POSITIVO SI A ESTA DESPUES DE B, SI SON IGUALES RETORNA 0//
     const nameA = a.name.toLowerCase();
     const nameB = b.name.toLowerCase();
+    //LA FUNCION DE TOLOWERCASE PONE TODAS LAS LETRAS EN MINUSCULA, POR LO CUAL LO HACE TANTO PARA NAMEA Y NAMEB//
     if (order === "asc") {
       return nameA.localeCompare(nameB);
     } else if (order === "desc") {
       return nameB.localeCompare(nameA);
     }
+    //LA FUNCION DE LOCALECOMPARE COMPARA DOS STRINGS Y DETERMINAR SU ORDEN RELATIVO//
+    //EL IF COMPARA LOS NOMBRE DE FORMA ACENDENTE OSEA DE A - Z Y SU LOCALLECOMPARE DEVUELVE UN NEGATIVO SI NAMEA PRESEDE A NAMEB MAS SI SON IGUALES DEVUELVE 0 SI NAMEA SIGUE A NAMEB RETORNA POSITIVO//
+    //MIENTRAS ELSE IF ORDENA DE FORMA DECENDENTE DE Z - A//
   });
 };
